@@ -19,26 +19,3 @@ The rate limit rules are defined for each notification type. Some example rules 
 - **Marketing:** Not more than 3 per hour for each recipient.
 
 These are just examples, and the system might have several other rate limit rules.
-
-## Project Structure
-
-```plaintext
-src/main/kotlin
-├── config
-│   ├── RateLimitRule.kt
-│   └── RateLimitRulesEngine.kt
-├── model
-│   ├── NotificationType.kt
-│   └── implementations
-│       ├── MarketingNotification.kt
-│       ├── NewsNotification.kt
-│       └── StatusNotification.kt
-├── service
-│   ├── RateLimiter.kt
-│   └── NotificationService.kt
-└── util
-    └── TimeProvider.kt
-
-src/test/kotlin
-└── service
-    └── RateLimiterTest.kt
